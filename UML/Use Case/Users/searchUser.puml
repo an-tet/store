@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+actor "Usuario autenticado" as logedUser
+actor administrador as admin
+actor "Usuario delegado" as delegatedUser
+note top
+    Usuario al que el administrador
+    o otro usuario delegado le delega
+    permisos de administración de usuarios
+end note
+rectangle "Buscar usuarios" {
+    usecase "Ingresar parametros de busqueda" as inputParams
+    usecase "Consultar usuario con los parametros" as searchUserWithParameters
+    usecase "Listar usuarios" as listUsers
+    inputParams .> searchUserWithParameters : include
+    searchUserWithParameters .> listUsers : include
+}
+logedUser -- inputParams
+admin  --|> logedUser
+delegatedUser  --|> logedUser
+@enduml

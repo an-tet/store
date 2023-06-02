@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor administrador as admin
+rectangle "Modificar usuario" {
+    usecase "Modificar datos" as inputModifiedData
+    note right
+        Los campos que se
+        necesita modificar
+    end note
+    usecase "Validar datos" as validateData
+    usecase "Modificar usuario" as modifyUser
+    inputModifiedData .> validateData : include
+    validateData ..> modifyUser : include
+}
+logedUser -- inputModifiedData
+admin  --|> logedUser
+delegatedUser  --|> logedUser
+@enduml

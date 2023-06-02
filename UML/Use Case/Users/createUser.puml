@@ -1,0 +1,38 @@
+@startuml
+left to right direction
+actor "Usuario autenticado" as logedUser
+actor administrador as admin
+actor "Usuario delegado" as delegatedUser
+note top
+    Usuario al que el administrador
+    o otro usuario delegado le delega
+    permisos de administración de usuarios
+end note
+rectangle "Crear usuario" {
+    usecase "Ingresar datos" as inputData
+    note top
+        datos del usuarios:
+
+        Primer nombre
+        Segundo nombre
+        Primer apellido
+        Segundo apellido
+        Tipo documento
+        Numero documento
+        Correo electrónico
+        Rol
+        Contacto emergencia
+        Número contacto emergencia
+        Fecha nacimiento
+        Contacto
+        Talla camisa
+    end note
+    usecase "Validar datos" as validateData
+    usecase "Crear usuario" as createUser
+    logedUser -- inputData
+    inputData .> validateData : include
+    validateData ..> createUser : include
+}
+admin  --|> logedUser
+delegatedUser  --|> logedUser
+@enduml

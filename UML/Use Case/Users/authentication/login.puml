@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+actor "usuario no identificado" as knownUSer
+
+rectangle "Inicio de sesión" {
+
+    usecase "Iniciar sesión" as login
+    usecase "Validar 2FA" as generate2fa
+    note right
+        2FA es validación
+        de doble factor
+    end note
+
+    knownUSer -- login
+    generate2fa .> login : extends
+}
+@enduml

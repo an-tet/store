@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+actor "Usuario autenticado" as logedUser
+actor administrador as admin
+actor "Usuario delegado" as delegatedUser
+note top
+    Usuario al que el administrador
+    o otro usuario delegado le delega
+    permisos de administración de usuarios
+end note
+rectangle "deshabilitar usuario" {
+    usecase "deshabilitar usuario" as disableUser
+    logedUser -- disableUser
+}
+admin  --|> logedUser
+delegatedUser  --|> logedUser
+@enduml
