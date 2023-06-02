@@ -2,8 +2,8 @@
 start
     :Ingresar página principal usuarios;
     repeat
-        :Escribir en el campo de busqueda;
-        :Clic en el boton buscar;
+        :Escribir en el campo de búsqueda;
+        :Clic en el botón buscar;
         :Consultar usuarios con los criterios;
         if (¿consulta exitosa?) is (Si) then
             if (¿Se encuentran coincidencias?) is (Si) then
@@ -13,7 +13,7 @@ start
                   Caso de éxito
                 end note
             else (No)
-                :Mostrar mensaje de que no hay coincidenas para los criterios;
+                :Mostrar mensaje de que no hay coincídenos para los criterios;
             endif
         else (No)
             :Mostrar mensaje de error;
