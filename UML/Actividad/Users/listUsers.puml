@@ -1,0 +1,22 @@
+@startuml
+start
+    :Ingresar página principal usuarios;
+    :Consultar usuarios;
+    if (¿consulta correcta?) is (Si) then
+        if(¿Hay usuarios?)
+            :Cargar tabla con los usuarios;
+        else
+            :Mostrar mensaje de que no hay usuarios aun;
+        endif
+        end
+        note
+          Caso de éxito
+        end note
+    else (No)
+        :Mostrar mensaje de error;
+        note right
+          Caso de error no controlado
+        end note
+    endif
+stop
+@enduml

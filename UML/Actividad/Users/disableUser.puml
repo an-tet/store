@@ -1,0 +1,28 @@
+@startuml
+start
+    :Ingresar página principal usuarios;
+    :Consultar usuarios;
+    if (¿consulta correcta?) is (Si) then
+        :Cargar tabla con los usuarios;
+        if (¿Hay usuarios?) is (Si) then
+            :Dar clic en el icono de deshabilitar usuario;
+            if (¿Deshabilito correctamente?) is (Si) then
+                :Mostrar mensaje de éxito;
+                end
+                note
+                  Caso de éxito
+                end note
+            else (No)
+                :No es posible deshabilitar si no hay usuarios;
+            endif
+        else (No)
+            :Mostrar mensaje de error;
+        endif
+    else (No)
+        :Mostrar mensaje de error;
+        note right
+          Caso de error no controlado
+        end note
+    endif
+stop
+@enduml

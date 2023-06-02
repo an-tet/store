@@ -1,0 +1,31 @@
+@startuml
+start
+    :Ingresar a la página crear usuario;
+    repeat
+    :Ingresar los campos del formulario;
+        if (¿Formato correcto?) is (Si) then
+            :Clic en el botón de crear usuario;
+            if (¿Formulario correcto?) is (Si) then
+                :Enviar formulario;
+                :Crear usuario;
+                if (¿Creación exitosa?) is (Si) then
+                    :Mostrar mensaje de éxito;
+                    end
+                    note
+                      Caso de éxito
+                    end note
+                else (No)
+                    :Mostrar mensaje error;
+                    note right
+                      Caso de error no controlado
+                    end note
+                endif
+            else (No)
+                :Mostrar mensaje error;
+            endif
+        else (No)
+            :Mostrar mensaje de error;
+        endif
+    repeat while()
+stop
+@enduml

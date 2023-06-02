@@ -1,0 +1,28 @@
+@startuml
+start
+    repeat
+    :Ingresar a página de inicio de sesión;
+    :Ingresar correo electrónico;
+    if (¿Formato correcto?) is (Si) then
+        :ingresar contraseña;
+        if (¿Formato correcto?) is (Si) then
+            :click en botón iniciar sesión;
+            :Enviar formulario;
+            if (¿Credenciales correctas?) is (Si) then
+                :redireccionar a página principal;
+                end
+                note
+                    caso de éxito
+                end note
+            else (No)
+                :mostrar mensaje de error;
+            endif
+        else (No)
+            :Mostar mensaje de error;
+        endif
+    else (No)
+        :Mostar mensaje de error;
+    endif
+repeat while ()
+stop
+@enduml

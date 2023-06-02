@@ -1,0 +1,26 @@
+@startuml
+start
+    :Ingresar página principal usuarios;
+    repeat
+        :Escribir en el campo de busqueda;
+        :Clic en el boton buscar;
+        :Consultar usuarios con los criterios;
+        if (¿consulta exitosa?) is (Si) then
+            if (¿Se encuentran coincidencias?) is (Si) then
+                :Filtrar tabla con las coincidencias;
+                end
+                note
+                  Caso de éxito
+                end note
+            else (No)
+                :Mostrar mensaje de que no hay coincidenas para los criterios;
+            endif
+        else (No)
+            :Mostrar mensaje de error;
+            note right
+              Caso de error no controlado
+            end note
+        endif
+    repeat while()
+stop
+@enduml

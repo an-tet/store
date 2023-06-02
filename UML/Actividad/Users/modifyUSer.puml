@@ -1,0 +1,40 @@
+@startuml
+start
+    :Ingresar a la página modificar usuario;
+    repeat
+        :Consultar datos del usuario;
+        if (¿Consulta correcta?)
+            :Cargar campos del formulario;
+            :Modificar los campos del formulario;
+                if (¿Formato correcto?) is (Si) then
+                    :Clic en el botón de modificar usuario;
+                    if (¿Formulario correcto?) is (Si) then
+                        :Enviar formulario;
+                        :Modificar usuario;
+                        if (¿Modificación exitosa?) is (Si) then
+                            :Mostrar mensaje de éxito;
+                            end
+                            note
+                              Caso de éxito
+                            end note
+                        else (No)
+                            :Mostrar mensaje error;
+                            note right
+                              Caso de error no controlado
+                            end note
+                        endif
+                    else (No)
+                        :Mostrar mensaje error;
+                    endif
+                else (No)
+                    :Mostrar mensaje de error;
+                endif
+        else
+            :Mensaje de error;
+            note right
+              Caso de error no controlado
+            end note
+        endif
+    repeat while()
+stop
+@enduml
