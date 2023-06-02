@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e06579f-a27b-489e-b9bd-6128707e7bac" name="Changes" comment="rename login.puml from authentication module" />
+    <list default="true" id="8e06579f-a27b-489e-b9bd-6128707e7bac" name="Changes" comment="Orthography correction in searchUser.puml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685672097738</updated>
-      <workItem from="1685672098761" duration="6498000" />
+      <workItem from="1685672098761" duration="7165000" />
     </task>
     <task id="LOCAL-00001" summary="init in other pleace">
       <created>1685672408663</created>
@@ -82,7 +82,28 @@
       <option name="project" value="LOCAL" />
       <updated>1685678541525</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="idea changes">
+      <created>1685678657508</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685678657508</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Orthography correction in searchUser.puml">
+      <created>1685678914405</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685678914405</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Orthography correction in searchUser.puml">
+      <created>1685678966699</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685678966699</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +113,8 @@
     <MESSAGE value="init in other pleace" />
     <MESSAGE value="Create activity diagrams for user and authentication module" />
     <MESSAGE value="rename login.puml from authentication module" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename login.puml from authentication module" />
+    <MESSAGE value="idea changes" />
+    <MESSAGE value="Orthography correction in searchUser.puml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Orthography correction in searchUser.puml" />
   </component>
 </project>
